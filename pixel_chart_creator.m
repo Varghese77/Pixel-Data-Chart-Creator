@@ -1,5 +1,5 @@
 %%%%%% Start Here
-%{
+
 v = VideoReader('video.mp4');
 fps = v.FrameRate;
 numFrames = round(fix(v.Duration) * fps + round((v.Duration - fix(v.Duration)) * fps) + 1);
@@ -42,9 +42,7 @@ save rgbCompressed.dat rgbCompressed
 clear rgb_values;
 clear rgbStep;
 clear rgbStepInterval
-%}
-comSize = 10000;
-rgbCompressed = importdata('rgbCompressed.dat');
+
 height = 0.2 * compSize;
 finalPic = ones(compSize + 1, height, 3);
 h = waitbar(0,strcat('Creating Pixel Chart:', num2str(0),'/', num2str(compSize + 1))); 
